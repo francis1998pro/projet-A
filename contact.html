@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="assets/logo-2048x1444.png" alt="Logo CEFORA" class="h-12 w-auto object-contain">
+                <div class="text-2xl font-bold text-blue-700 leading-tight">
+                    CEFORA <span class="text-red-600">FORMATION</span>
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#" class="text-gray-600 hover:text-blue-700 font-medium transition">Accueil</a>
+                <div class="relative group">
+                    <button class="flex items-center text-gray-600 hover:text-blue-700 font-medium focus:outline-none">
+                        Filières
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-48 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <a href="#formations" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700">Informatique</a>
+                        <a href="#formations" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700">Mode et Beauté</a>
+                        <a href="#formations" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700">Administration</a>
+                    </div>
+                </div>
+                <a href="#" class="text-gray-600 hover:text-blue-700 font-medium">À Propos</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-700 font-medium">Contact</a>
+                <a href="#inscription" class="bg-blue-700 text-white px-5 py-2 rounded-full hover:bg-red-600 transition duration-300">Inscription</a>
+            </div>
+
+            <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16m-7 6h7" stroke-width="2" stroke-linecap="round"></path></svg>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-6 space-y-4 shadow-lg">
+            <a href="#" class="block text-gray-600 font-medium">Accueil</a>
+            <button id="mobile-dropdown-btn" class="flex justify-between w-full text-gray-600 font-medium">Filières <span>+</span></button>
+            <div id="mobile-dropdown-content" class="hidden pl-4 space-y-2 text-gray-500 text-sm">
+                <a href="#formations" class="block">Informatique</a>
+                <a href="#formations" class="block">Mode et Beauté</a>
+                <a href="#formations" class="block">Administration</a>
+            </div>
+            <a href="#contact" class="block bg-blue-700 text-white py-2 rounded-md text-center">Contact</a>
+        </div>
+    </header>
+<body>
+    
+</body>
+ <footer id="contact" class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center md:text-left grid md:grid-cols-3 gap-8">
+            <div>
+                <div class="text-xl font-bold text-blue-500 mb-4">CEFORA <span class="text-red-600">FORMATION</span></div>
+                <p class="text-gray-400">Votre avenir commence ici.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Contact</h4>
+                <p class="text-gray-400">Email: contact@cefora.com</p>
+                <p class="text-gray-400">Tél: +229 01 59 78 78 68  / 01 63 21 21 16</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Suivez-nous</h4>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">Facebook</a>
+                    <a href="#" class="text-gray-400 hover:text-white">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</html>

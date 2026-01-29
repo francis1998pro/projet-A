@@ -1,0 +1,194 @@
+<<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>CEFORA FORMATION - Excellence en Formation</title>
+    <style>
+        /* Animations pour les bulles en arrière-plan */
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob { animation: blob 7s infinite; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+        
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<header class="absolute top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-sm shadow-md">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <img src="assets/logo-2048x1444.png" alt="Logo CEFORA" class="h-12 w-auto object-contain">
+            <div class="text-2xl font-bold text-blue-700 leading-tight">
+                CEFORA <span class="text-red-600">FORMATION</span>
+            </div>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-8">
+            <a href="#" class="text-gray-700 hover:text-blue-700 font-medium transition">Accueil</a>
+            
+            <div class="relative group">
+                <button class="flex items-center text-gray-700 hover:text-blue-700 font-medium focus:outline-none">
+                    Filières
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <a href="#formations" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700">Informatique</a>
+                    <a href="#formations" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700">Mode et Beauté</a>
+                    <a href="#formations" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700">Administration</a>
+                </div>
+            </div>
+
+            <a href="#a-propos" class="text-gray-700 hover:text-blue-700 font-medium">À Propos</a>
+            <a href="#contact" class="text-gray-700 hover:text-blue-700 font-medium">Contact</a>
+            <a href="#inscription" class="bg-blue-700 text-white px-5 py-2 rounded-full hover:bg-red-600 transition duration-300 shadow-md">Inscription</a>
+        </div>
+
+        <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M4 6h16M4 12h16m-7 6h7" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-6 space-y-4 shadow-xl">
+        <a href="#" class="block text-gray-700 font-medium">Accueil</a>
+        <a href="#formations" class="block text-gray-700 font-medium">Filières</a>
+        <a href="#a-propos" class="block text-gray-700 font-medium">À Propos</a>
+        <a href="#contact" class="block text-gray-700 font-medium">Contact</a>
+        <a href="#inscription" class="block bg-blue-700 text-white py-2 rounded-md text-center font-bold">Inscription</a>
+    </div>
+</header>
+<body class="bg-gray-50 text-gray-900">
+
+    <section class="relative bg-blue-900 overflow-hidden min-h-screen flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-0 -left-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+            <div class="absolute bottom-0 right-10 w-80 h-80 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6">
+                Propulsez votre carrière avec <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">CEFORA FORMATION</span>
+            </h1>
+            <p class="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+                Des formations certifiantes adaptées au marché de l'emploi pour transformer votre avenir.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#formations" class="px-8 py-4 bg-blue-700 text-white font-bold rounded-lg transition-all hover:bg-red-600 hover:scale-105">Découvrir nos formations</a>
+                <a href="#contact" class="px-8 py-4 border-2 border-white text-white font-bold rounded-lg transition-all hover:bg-red-600 hover:border-red-600 hover:scale-105">S'inscrire</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="formations" class="py-20 container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">Nos Catalogues de <span class="text-red-600">Formations</span></h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-700">
+                <h3 class="text-xl font-bold mb-4">Informatique</h3>
+                <p class="text-gray-600 mb-4">Développement web, Data Science et Cybersécurité.</p>
+                <a href="#" class="text-blue-700 font-semibold hover:underline">En savoir plus →</a>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-600">
+                <h3 class="text-xl font-bold mb-4">Mode et Beauté</h3>
+                <p class="text-gray-600 mb-4">Haute couture, coiffure et cosmétique.</p>
+                <a href="#" class="text-blue-700 font-semibold hover:underline">En savoir plus →</a>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-700">
+                <h3 class="text-xl font-bold mb-4">Administration</h3>
+                <p class="text-gray-600 mb-4">Administratif, comptabilité, gestion de documents et marketing.</p>
+                <a href="#" class="text-blue-700 font-semibold hover:underline">En savoir plus →</a>
+            </div>
+        </div>
+    </section>
+    <section id="a-propos" class="py-20 bg-white overflow-hidden">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+            
+            <div class="lg:w-1/2" data-aos="fade-right">
+                <div class="mb-6">
+                    <span class="text-red-600 font-bold tracking-widest uppercase text-sm">Qui sommes-nous ?</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mt-2">
+                       Cefora Formation une école de formation technique et professionnelle situé à Cotonou, Agla Hlazounto. Chez nous c’est :  <span class="text-red-600"></span>
+                    </h2>
+                </div>
+                <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                    A travers ce site nous ouvrons l’accès à nos formations techniques et professionnelles,<br> afin de répondre aux exigences de ceux et celles qui nous font et qui nous font confiance dans la quête <br> d’une formation de qualité face aux besoins et aux exigences du marché de l’emploi et de l’entreprenariat.
+                </p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center text-gray-700">
+                        <span class="bg-blue-100 p-2 rounded-full mr-4 text-blue-700">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </span>
+                        Des filières d'avenir et des formations de qualité;
+                    </li>
+                    <li class="flex items-center text-gray-700">
+                        <span class="bg-blue-100 p-2 rounded-full mr-4 text-blue-700">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </span>
+                        Des stages pour tous nos apprenants en fin de formation;
+                    </li>
+                     <li class="flex items-center text-gray-700">
+                        <span class="bg-blue-100 p-2 rounded-full mr-4 text-blue-700">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </span>
+                       Etre compétitif sur le marché de l'emploi et de l'auto emploi.
+                    </li>
+                </ul>
+                <a href="#contact" class="inline-block bg-blue-700 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-600 transition duration-300 transform hover:-translate-y-1">
+                    En savoir plus
+                </a>
+            </div>
+
+            <div class="lg:w-1/2 grid grid-cols-2 gap-4 relative">
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-red-100 rounded-bl-full z-0"></div>
+                
+                <div class="space-y-4 pt-8">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80" alt="Le centre CEFORA" class="rounded-2xl shadow-xl hover:scale-105 transition duration-500 z-10 relative">
+                    <div class="bg-blue-700 p-4 rounded-2xl text-white text-center shadow-lg">
+                        <span class="block text-2xl font-bold">+500</span>
+                        <span class="text-xs uppercase">Candidats formés</span>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80" alt="Nos candidats" class="rounded-2xl shadow-xl hover:scale-105 transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80" alt="Formation pratique" class="rounded-2xl shadow-xl hover:scale-105 transition duration-500">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <footer id="contact" class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center md:text-left grid md:grid-cols-3 gap-8">
+            <div>
+                <div class="text-xl font-bold text-blue-500 mb-4">CEFORA <span class="text-red-600">FORMATION</span></div>
+                <p class="text-gray-400">Votre avenir commence ici.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Contact</h4>
+                <p class="text-gray-400">Email: contact@cefora.com</p>
+                <p class="text-gray-400">Tél: +229 01 59 78 78 68  / 01 63 21 21 16</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Suivez-nous</h4>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">Facebook</a>
+                    <a href="#" class="text-gray-400 hover:text-white">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
